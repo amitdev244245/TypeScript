@@ -71,3 +71,32 @@
 
 // console.log(login({name: "A", id: "2", age: 23}))
 // ------------------------------------------------
+
+// ------------------------------------------------
+// 👉TS: Interfaces
+// interface Transaction {
+//     payerAccountNumber: number;
+//     payeeAccountNumber: number;
+// }
+
+// interface BankAccount {
+//     accountNumber: number;
+//     accountHolder: string;
+//     balance: number;
+//     isActive: boolean;
+//     transactions: Transaction[];
+// }
+
+// const transaction1: Transaction = {
+//     payerAccountNumber: 232445533,
+//     payeeAccountNumber: 342334234
+// }
+
+// const bankAccount: BankAccount = {
+//     accountNumber: 124354553,
+//     accountHolder: "Amit Sharma",
+//     balance: 2000,
+//     isActive: true,
+//     transactions: [transaction1]
+// }
+// ------------------------------------------------
