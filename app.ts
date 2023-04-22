@@ -130,3 +130,21 @@
 //     format: 'pdf',
 //     duration: 4
 // }
+// ------------------------------------------------
+
+// ------------------------------------------------
+// 👉TS: Interfaces (Merge)
+// interface Book {
+//     name: string;
+//     price: number;
+// }
+// interface Book {
+//     size: number;
+// }
+
+// const book: Book = {
+//     name: 'Atomic Habbits',
+//     price: 1200,
+//     size: 45
+// }
+// ------------------------------------------------
