@@ -148,3 +148,24 @@
 //     size: 45
 // }
 // ------------------------------------------------
+
+// ------------------------------------------------
+// 👉TS: Interfaces (Merge vs Type alias)
+// Note: Merging can be worked with interfaces but can not be used with type alias.
+// type Book = {
+//     name: string;
+//     price: number;
+// }
+
+// type Book = {
+//     size: number;
+// }
+
+// Note: Interfaces are made for work with objects.
+// type SanitizedString = string;
+// type EvenNumber = number;
+
+// interface SanitizedString extends string {
+
+// }
+// ------------------------------------------------
