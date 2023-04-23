@@ -300,3 +300,47 @@
 //     const user = await fetchData<IUser[]>('/users');
 //     user[0].name;
 // })();
+// ------------------------------------------------
+
+// ------------------------------------------------
+// 👉TS: Structural Typing or Duck Typing
+
+// interface ICredential {
+//     username: string;
+//     password: string;
+//     isAdmin?: boolean;
+// }
+
+// function login(credentials: ICredential){
+//     console.log(credentials);
+//     return true;
+// }
+
+// const user = {
+//     username: 'amit',
+//     password: 'secret',
+//     isAdmin: true
+// }
+
+// login(user);
+
+
+// interface IAuth {
+//     username: string;
+//     password: string;
+//     login(username: string, password: string): boolean;
+// }
+
+// const auth: IAuth = {
+//     username: 'amit',
+//     password: 'secret',
+//     login(username: string, password: string){
+//         return true;
+//     }
+// }
+
+//inference
+// let id = 123;
+// let ID = "123T";
+
+// ------------------------------------------------
