@@ -192,3 +192,111 @@
 // console.log(getFirstThree('hello'));
 // console.log(getFirstThree([1, 2, 3, 4, 5]));
 // ------------------------------------------------
+
+// ------------------------------------------------
+// 👉TS: Interfaces (Generics)
+// function logString(arg: string){
+//     console.log(arg);
+//     return arg;
+// }
+// logString('Logged in');
+
+// function logNumber(arg: number){
+//     console.log(arg);
+//     return arg;
+// }
+// logNumber(22);
+
+// function logArray(arg: any[]){
+//     console.log(arg);
+//     return arg;
+// }
+// logArray([2, 3]);
+
+// function logAnything(arg: any){
+//     console.log(arg);
+//     return arg;
+// }
+// logAnything([2, 3]);
+
+// function logAny<T>(arg: T): T{
+//     console.log(arg);
+//     return arg;
+// }
+// logAny([2, 3]);
+// logAny(['hello']);
+
+// Example 2
+
+// interface HasAge {
+//     age: number;
+// }
+
+// // function getOldest(people: HasAge[]): HasAge{
+// //     return people.sort((a, b) => b.age - a.age)[0];
+// // }
+
+// const people:HasAge[] = [{age: 30}, {age: 40}, {age: 10}];
+// getOldest(people).age;
+
+// function getOldest<T extends HasAge>(people: T[]): T{
+//     return people.sort((a, b) => b.age - a.age)[0];
+// }
+
+// interface Player {
+//     name: string;
+//     age: number;
+// }
+
+// const players = [{name: 'John', age: 30}, {name: 'Jane', age: 35}, {name: 'Joe', age: 15}];
+// getOldest(players).age;
+
+// // Assertion
+// // const person = getOldest(players) as Player;
+
+// // Generics
+// const person = getOldest(players);
+// person.name
+
+// Example 3
+
+// interface IPost {
+//     title: string;
+//     id: number;
+//     description: string;
+// }
+
+// interface IUser {
+//     id: number;
+//     name: string;
+//     age: number;
+// }
+
+// const fetchPostData = async (path: string): Promise<IPost[]> => {
+//     const response = await fetch(`http://example.com/${path}`);
+//     return response.json();
+// }
+
+// const fetchUserData = async (path: string): Promise<IUser[]> => {
+//     const response = await fetch(`http://example.com/${path}`);
+//     return response.json();
+// }
+
+// const fetchData = async <ResultType>(path: string): Promise<ResultType> => {
+//     const response = await fetch(`http://example.com/${path}`);
+//     return response.json();
+// }
+
+// (async()=> {
+//     const posts = await fetchPostData('/posts');
+//     posts[0].description;
+
+//     const users = await fetchUserData('/users');
+//     users[0].name;
+
+//     const post = await fetchData<IPost[]>('/posts');
+//     post[0].description;
+
+//     const user = await fetchData<IUser[]>('/users');
+//     user[0].name;
+// })();
